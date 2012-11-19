@@ -7,14 +7,21 @@ and Bottle.py.
 
 All endpoints return JSON.
 
-''' /db '''
+* GET `/db`
+
 Provides a list of tables.
 
-''' /db/:tablename '''
-Provides a list of rows (as dictionaries) from table. Accepts `limit` query
-parameter which defaults to 1000.
+* GET `/db/:tablename`
 
-''' /db/:tablename/:pk '''
+Provides a list of rows (as dictionaries) from table.  Accepts `limit`
+query parameter which defaults to 1000.
+
+* POST `/db/:tablename`
+
+Insert a row into database, `Content-Type` must be `application/json`.
+
+* GET `/db/:tablename/:pk`
+
 Retrieves a single row as dictionary based on primary key.
 
 ## Install
