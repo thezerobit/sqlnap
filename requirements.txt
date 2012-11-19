@@ -1,0 +1,3 @@
+sqlsoup
+psycopg2
+bottle
