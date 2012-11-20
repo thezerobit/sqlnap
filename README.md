@@ -24,6 +24,14 @@ Insert a row into database, `Content-Type` must be `application/json`.
 
 Retrieves a single row as dictionary based on primary key.
 
+* PUT `/db/:tablename/:pk`
+
+Create or replace a single row based on primary key.
+
+* PATCH `/db/:tablename/:pk`
+
+Partial update a single row based on primary key.
+
 ## Install
 
 Ubuntu:
