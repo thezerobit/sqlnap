@@ -17,7 +17,9 @@ def to_data(obj):
     for thetype in IDENTITY_TYPES:
         if isinstance(obj, thetype):
             return obj
-    if isinstance(obj, str):
+    if obj is None:
+        return obj
+    elif isinstance(obj, str):
         return obj.decode(DEFAULT_ENCODING)
     elif isinstance(obj, collections.Mapping):
         return dict([(unicode(key), to_data(obj[key])) for key in obj])
